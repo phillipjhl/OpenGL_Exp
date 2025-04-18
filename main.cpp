@@ -22,7 +22,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-	GLFWwindow *window = glfwCreateWindow(800, 600, "OpenGL", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(800, 600, "OpenGL Testing", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -58,7 +58,7 @@ int main()
 	"out vec4 FragColor;\n"
 	"void main()\n"
 	"{\n"
-	"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+	"   FragColor = vec4(1.0f, 0.5f, 0.3f, 1.0f);\n"
 	"}\0";
 	unsigned int fragmentShader;
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -109,7 +109,7 @@ int main()
 		0.5f, -0.5f, 0.0f, // bottom right
 		-0.5f, -0.5f, 0.0f, // bottom left
 		-0.5f, 0.5f, 0.0f, // top left
-		0.0f, 0.75f, 0.0f // top point
+		// 0.0f, 0.75f, 0.0f // top point
 	};
 	unsigned int indices[] = {
 		0, 3, 4,
@@ -141,9 +141,9 @@ int main()
 	glEnableVertexAttribArray(0);
 
 	// wireframe mode
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	// normal mode
-	// glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 
 	// render loop

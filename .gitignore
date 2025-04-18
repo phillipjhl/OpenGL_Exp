@@ -1,2 +1,10 @@
 build/
+
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
 .cache/
+CMakeScripts/
+CMakeTmp/
+cmake_install.cmake
